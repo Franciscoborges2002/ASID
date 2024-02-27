@@ -67,3 +67,21 @@
 * Henning and Hasselbring definitions:
     * **Demand metric**: Com o aumento dos recursos como é que aumenta a intensidade de carga (pedidos concorrentes);
     * **Capacity metric**: Como é que a carga aumenta com o aumento de recursos;
+
+# 27/02/2024
+
+## Micro-serviços
+* Existe uma base de dados para cada microsserviço
+* A auntenticação também pode ser um microsserviço
+* Promovem *Continous Delivery* e *Continous Deplyoment*
+
+## SOA
+* É mais conceptual
+
+## Comunicação entre serviços
+* Padões de interação baseados em mensagens síncronas (REST, SOAP, RPC)
+* Padões de interação baseados em mensagens assíncronas (Kafka)
+
+Formas de saber quais ips é que estão disponiveis:
+* Ter um bd para ter quais ips e que serviço podem funcionar (como o RMI Registry)
+
