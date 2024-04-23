@@ -1,0 +1,40 @@
+2024-03-19 15:29:29,090 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-03-19 15:29:29,234 INFO o.a.j.JMeter: Loading user properties from: /opt/jmeter/bin/user.properties
+2024-03-19 15:29:29,239 INFO o.a.j.JMeter: Loading system properties from: /opt/jmeter/bin/system.properties
+2024-03-19 15:29:29,244 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2024-03-19 15:29:29,244 INFO o.a.j.JMeter: Version 5.6.2
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: java.version=1.8.0_402
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: os.name=Linux
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: os.arch=amd64
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: os.version=6.8.1-arch1-1
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: java.awt.headless=null
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-03-19 15:29:29,245 INFO o.a.j.JMeter: Available Processors =8
+2024-03-19 15:29:29,268 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-03-19 15:29:29,268 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-03-19 15:29:29,268 INFO o.a.j.JMeter: JMeterHome=/opt/jmeter
+2024-03-19 15:29:29,268 INFO o.a.j.JMeter: user.dir  =/home/fran/Desktop/uni/4ano/ASID/projeto/Web App
+2024-03-19 15:29:29,268 INFO o.a.j.JMeter: PWD       =/home/fran/Desktop/uni/4ano/ASID/projeto/Web App
+2024-03-19 15:29:29,269 INFO o.a.j.JMeter: IP: 172.26.85.95 Name: franArch FullName: franArch
+2024-03-19 15:29:29,322 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-03-19 15:29:31,019 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2024-03-19 15:30:06,824 INFO o.a.j.s.FileServer: Default base='/home/fran/Desktop/uni/4ano/ASID/projeto/Web App'
+2024-03-19 15:30:06,827 INFO o.a.j.g.a.Load: Loading file: /home/fran/Desktop/uni/4ano/ASID/loadBalancerOracle.jmx
+2024-03-19 15:30:06,827 INFO o.a.j.s.FileServer: Set new base='/home/fran/Desktop/uni/4ano/ASID'
+2024-03-19 15:30:07,013 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-03-19 15:30:07,028 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-03-19 15:30:07,030 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-03-19 15:30:07,034 INFO o.a.j.s.SaveService: Loading file: /home/fran/Desktop/uni/4ano/ASID/loadBalancerOracle.jmx
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2024-03-19 15:30:07,063 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2024-03-19 15:30:07,314 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-03-19 15:30:07,315 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2024-03-19 15:30:07,315 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-03-19 15:30:07,315 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-03-19 15:30:07,643 INFO o.a.j.s.FileServer: Set new base='/home/fran/Desktop/uni/4ano/ASID'

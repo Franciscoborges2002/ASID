@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  employee_db_istudent: # Employees and departments
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'employee'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+    volumes:
+      # Where our data will be persisted
+      - employee_db_istudent:/var/lib/mysql
+  teachers_db_istudent: # Teachers and subjects
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'teachers'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3307:3306'
+    expose:
+      # Opens port 3307 on the container
+      - '3307'
+    volumes:
+      # Where our data will be persisted
+      - teachers_db_istudent:/var/lib/mysql
+  towns_db_istudent: # Town and Country
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'towns'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3308:3306'
+    expose:
+      # Opens port 3308 on the container
+      - '3308'
+    volumes:
+      # Where our data will be persisted
+      - towns_db_istudent:/var/lib/mysql
+  parents_db_istudent: # Parents
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'parents'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3309:3306'
+    expose:
+      # Opens port 3309 on the container
+      - '3309'
+    volumes:
+      # Where our data will be persisted
+      - parents_db_istudent:/var/lib/mysql
+  student_db_istudent: # Parents
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'student'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3310:3306'
+    expose:
+      # Opens port 3310 on the container
+      - '3310'
+    volumes:
+      # Where our data will be persisted
+      - student_db_istudent:/var/lib/mysql
+  marks_db_istudent: # Parents
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'marks'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3311:3306'
+    expose:
+      # Opens port 3311 on the container
+      - '3311'
+    volumes:
+      # Where our data will be persisted
+      - marks_db_istudent:/var/lib/mysql
+
+volumes:
+  employee_db_istudent:
+    driver: local
+  teachers_db_istudent:
+    driver: local
+  towns_db_istudent:
+    driver: local
+  parents_db_istudent:
+    driver: local
+  student_db_istudent:
+    driver: local
+  marks_db_istudent:
+    driver: local
