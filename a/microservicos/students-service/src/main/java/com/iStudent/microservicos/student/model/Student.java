@@ -2,7 +2,9 @@ package com.iStudent.microservicos.student.model;
 
 import com.iStudent.microservicos.student.model.base.BasePersonEntity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -15,6 +17,8 @@ import java.util.Set;
 @Table(name = "students")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Student extends BasePersonEntity {
     @ManyToOne
     private Parent parent;
@@ -36,8 +40,4 @@ public class Student extends BasePersonEntity {
     @Column(name = "enroll_date", nullable = false)
     private LocalDate enrollDate;
 
-    public Student() {
-        this.clubs = new HashSet<>();
-        this.marks = new ArrayList<>();
-    }
 }

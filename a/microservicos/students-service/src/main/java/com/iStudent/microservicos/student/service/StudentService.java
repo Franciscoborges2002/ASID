@@ -23,11 +23,17 @@ public class StudentService {
     private final ModelMapper mapper;
 
     public List<StudentDTO> getAllStudents() {
-        return studentRepository
+        List<Student> allStudents = studentRepository.findAll();
+
+        System.out.println(allStudents);
+
+        return allStudents.stream().map(this::mapToStudentDTO).toList();
+
+        /*return studentRepository
                 .findAll()
                 .stream()
                 .map(this::mapToStudentDTO)
-                .toList();
+                .toList();*/
     }
 
     public Optional<StudentDTO> getStudentById(Long studentId) {
@@ -37,7 +43,7 @@ public class StudentService {
     }
 
     public long addStudent(StudentDTO studentDTO) {
-        Town townToMap = townService.findByTownId(studentDTO.getTown().getId());
+        /*Town townToMap = townService.findByTownId(studentDTO.getTown().getId());
 
         Parent parentToMap = parentService.findParentById(studentDTO.getParent() != null
                 ? studentDTO.getParent().getId()
@@ -50,11 +56,12 @@ public class StudentService {
 
         studentRepository.save(student);
 
-        return student.getId();
+        return student.getId();*/
+        return 1;
     }
 
     public boolean addMarkToStudent(Long studentId, MarkDTO markDTO) {
-        Mark markToAdd = markRepository.findByMark(markDTO.getMark());
+        /*Mark markToAdd = markRepository.findByMark(markDTO.getMark());
         Optional<Student> optionalStudent = studentRepository.findById(studentId);
 
         if (optionalStudent.isPresent()) {
@@ -64,6 +71,7 @@ public class StudentService {
             return true;
         }
 
+        return false;*/
         return false;
     }
 

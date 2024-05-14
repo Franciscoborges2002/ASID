@@ -2,13 +2,16 @@ package com.iStudent.microservicos.student.model;
 
 import com.iStudent.microservicos.student.model.base.BaseEntityWithIdLong;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "towns")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Town extends BaseEntityWithIdLong {
 
     @Column

@@ -1,8 +1,10 @@
 package com.iStudent.microservicos.student.dto.base;
 
+import com.iStudent.microservicos.student.dto.TownDTO;
 import com.iStudent.microservicos.student.model.enums.GenderEnum;
 import com.iStudent.microservicos.student.model.validation.ValidEGN;
 import com.iStudent.microservicos.student.model.validation.ValidGender;
+import com.iStudent.microservicos.student.model.validation.ValidTown;
 import jakarta.validation.constraints.*;
 
 public abstract class PersonEntityDTO {

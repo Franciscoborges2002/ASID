@@ -5,13 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6644a008-3212-4cd8-a6dc-cacbb320cc58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/api_gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/api_gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/src/main/java/com/istudent/microservicos/discoveryserver/DiscoveryServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/discovery_server/src/test/java/com/istudent/microservicos/discoveryserver/DiscoveryServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/MicroservicosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/controller/DepartmentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/controller/EmployeesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/dto/CountryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/dto/DepartmentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/dto/EmployeeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/dto/TownDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/dto/base/PersonEntityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/Town.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/base/BaseEntityWithIdLong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/base/BasePersonEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/model/enums/GenderEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/repository/DepartmentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/repository/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/service/DepartmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/DepartmentValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidDepartment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidEGN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidEGNValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidGender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidGenderValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidTown.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/java/com/iStudent/microservicos/validation/ValidTownValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/servico-empregados/src/test/java/com/iStudent/microservicos/MicroservicosApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/students-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/example/microservicos/MicroservicosApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/test/java/com/example/microservicos/MicroservicosApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a/microservicos/teachers-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/teachers-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a/microservicos/teachers-service/src/main/java/com/example/microservicos/MicroservicosApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a/microservicos/teachers-service/src/test/java/com/example/microservicos/MicroservicosApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/MicroservicosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/MicroservicosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/dto/base/PersonEntityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/dto/base/PersonEntityDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/java/com/iStudent/microservicos/student/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/students-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/town-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/town-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/java/com/iStudent/microservicos/town/MicroservicosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/java/com/iStudent/microservicos/town/MicroservicosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/java/com/iStudent/microservicos/town/controller/TownController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/java/com/iStudent/microservicos/town/controller/TownController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../a/microservicos/town-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +79,24 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2fbooMr6ogbb0LNFmdSXFnTXdtB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="discovery_server" />
@@ -74,6 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714079313818</updated>
       <workItem from="1714079314923" duration="71000" />
+      <workItem from="1714247672266" duration="12000" />
     </task>
     <servers />
   </component>

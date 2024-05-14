@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.modelmapper.ModelMapper;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -15,6 +16,10 @@ public class TownService {
 
     private final TownRepository townRepository;
     private final ModelMapper mapper;
+
+    public List<Town> getTowns(){
+        return this.townRepository.findAll();
+    }
 
     public Optional<TownDTO> findByTownId(Long townId){
         return this.townRepository.findById(townId)

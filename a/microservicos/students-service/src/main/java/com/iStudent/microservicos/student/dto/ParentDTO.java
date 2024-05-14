@@ -4,18 +4,14 @@ package com.iStudent.microservicos.student.dto;
 import com.iStudent.microservicos.student.dto.base.PersonEntityDTO;
 import com.iStudent.microservicos.student.model.validation.PhoneNumber;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
-public class ParentDTO extends PersonEntityDTO {
+@Setter
+@Getter
+public class ParentDTO {
 
-    @NotBlank
-    @PhoneNumber
-    private String phoneNumber;
+    private Long id;
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    private String name;
 }

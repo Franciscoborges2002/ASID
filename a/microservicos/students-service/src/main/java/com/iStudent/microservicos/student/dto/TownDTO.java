@@ -13,5 +13,5 @@ public class TownDTO {
     @NotBlank
     private String name;
 
-    private CountryDTO country;
+    private String countryName;
 }

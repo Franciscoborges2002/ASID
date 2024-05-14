@@ -1,11 +1,13 @@
 package com.iStudent.microservicos.town.controller;
 
 import com.iStudent.microservicos.town.dto.TownDTO;
+import com.iStudent.microservicos.town.model.Town;
 import com.iStudent.microservicos.town.service.TownService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -14,6 +16,11 @@ import java.util.Optional;
 public class TownController {
 
     private final TownService townService;
+
+    @GetMapping("/all")
+    public List<Town> getTowns(){
+        return this.townService.getTowns();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<TownDTO> getTownByid(@PathVariable("id") Long townId){
@@ -25,9 +32,17 @@ public class TownController {
                 .build());
     }
 
-    //Nees to be like /town?name={name}
+    //Needs to be like /town?name={name} use %20 for spaces
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<TownDTO> getTownByid(@RequestParam(value="name") String townName){
+    public ResponseEntity<TownDTO> getTownByName(@RequestParam(value="name") String townName){
+
+        //When name has spaces, remove asci for space
+        if(townName.contains("%20")){
+            townName = townName.replace("%20", " ");
+        }
+
+        System.out.println(townName);
+
         Optional<TownDTO> town = this.townService.findByTownName(townName);
 
         //Return the towndto if in the optional is something
