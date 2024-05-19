@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Serviço da api gateway, não precisa de bd
+  api_gateway:
+    #image: ASID_api_gateway
+    build: 
+      dockerfile: Dockerfile.api_gateway
+    ports:
+      - '8080:8080'
+    expose:
+      - '8080'
+    restart: unless-stopped
+  #Serviço do service discover
+  discovery_server:
+    build: 
+      dockerfile: ./Dockerfile.discovery_server
+    ports:
+      - '8761:8761'
+    expose:
+      - '8761'
+    restart: unless-stopped
+  #Serviço do service discover
