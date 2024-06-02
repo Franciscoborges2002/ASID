@@ -1,8 +1,10 @@
 package com.example.microservicos.controller;
 
 import com.example.microservicos.dto.ClubDTO;
+import com.example.microservicos.dto.clubStudentDTO;
 import com.example.microservicos.model.Club;
 import com.example.microservicos.service.ClubService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -48,5 +50,14 @@ public class ClubController {
         Club createdClub = clubService.addClub(clubDTO);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(createdClub);
+    }
+
+    @PostMapping("/{clubId}/student/{studentId}")
+    public ResponseEntity<clubStudentDTO> addClub(@PathVariable("clubId") Long clubId, @PathVariable("studentId") Long studentId) throws JsonProcessingException {
+
+        //Send to the service
+        clubStudentDTO response = clubService.attachStudentToClub(clubId, studentId);
+
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

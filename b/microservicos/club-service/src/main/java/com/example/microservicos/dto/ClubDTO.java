@@ -10,6 +10,8 @@ import lombok.Setter;
 @Setter
 public class ClubDTO {
 
+    private Long id;
+
     @NotBlank
     @Size(min = 2, max = 20)
     @UniqueClubName

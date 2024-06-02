@@ -3,10 +3,11 @@ package com.iStudent.microservicos.studentmark.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.iStudent.microservicos.studentmark.dto.MarkDTO;
 import com.iStudent.microservicos.studentmark.dto.StudentDTO;
-import com.iStudent.microservicos.studentmark.model.Student;
+import com.iStudent.microservicos.studentmark.dto.ClubStudentDTO;
 import com.iStudent.microservicos.studentmark.service.StudentService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -21,8 +22,8 @@ public class StudentController {
 
     private final StudentService studentService;
 
-    @GetMapping
-    public ResponseEntity<List<StudentDTO>> getAllStudents() throws Exception {
+    @GetMapping()
+    public ResponseEntity<List<StudentDTO>> getAllStudents() {
         return ResponseEntity
                 .ok(studentService.getAllStudents());
     }
@@ -31,27 +32,26 @@ public class StudentController {
     public ResponseEntity<StudentDTO> getStudentById(@PathVariable("id") Long studentId) {
         Optional<StudentDTO> student = this.studentService.getStudentById(studentId);
 
-        if (student.isEmpty()) {
-            return ResponseEntity
-                    .notFound()
-                    .build();
-
-        } else {
-            return ResponseEntity
-                    .ok(student.get());
-
-        }
+        return student.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity
+                .notFound()
+                .build());
     }
 
     @PostMapping
     public ResponseEntity<StudentDTO> addStudent(@Valid @RequestBody StudentDTO studentDTO,
                                                  UriComponentsBuilder uriComponentsBuilder) throws JsonProcessingException {
-        long newStudentId = studentService.addStudent(studentDTO);
+
+        StudentDTO studentReturn = studentService.addStudent(studentDTO);
 
         return ResponseEntity
-                .created(uriComponentsBuilder.path("/students/{id}")
-                        .build(newStudentId))
-                .build();
+                .ok(studentReturn);
+    }
+
+    @PostMapping("/{studentId}/club/{clubId}")
+    public ResponseEntity<ClubStudentDTO> associateClubAndStudent(@PathVariable("studentId") Long studentId, @PathVariable("clubId") Long clubId) throws JsonProcessingException {
+        ClubStudentDTO response = studentService.attachClubToStudent(studentId, clubId);
+
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @PostMapping("/{id}/add/mark")

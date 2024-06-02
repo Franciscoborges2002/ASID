@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.util.Set;
 
 @Entity
-@Table(name = "countries")
+@Table(name = "country")
 @Getter
 @Setter
 public class Country extends BaseEntityWithIdLong {
@@ -16,6 +16,6 @@ public class Country extends BaseEntityWithIdLong {
     @Column
     private String name;
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", fetch = FetchType.LAZY)
     private Set<Town> towns;
 }

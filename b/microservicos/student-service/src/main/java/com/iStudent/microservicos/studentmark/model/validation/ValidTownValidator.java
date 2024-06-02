@@ -2,7 +2,7 @@ package com.iStudent.microservicos.studentmark.model.validation;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iStudent.microservicos.studentmark.controller.TownCallerController;
+import com.iStudent.microservicos.studentmark.extern.TownCallerController;
 import com.iStudent.microservicos.studentmark.dto.TownDTO;
 import com.iStudent.microservicos.studentmark.model.Town;
 import jakarta.validation.ConstraintValidator;
@@ -16,16 +16,14 @@ public class ValidTownValidator implements ConstraintValidator<ValidTown, TownDT
 
     @Override
     public boolean isValid(TownDTO town, ConstraintValidatorContext context) {
-        String townResponse = townCallerController.findTownByName(town.getTownName());
+        TownDTO townResponse = townCallerController.findTownByName(town.getName());
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        Town townCompare = null;
-        try {
-            townCompare = objectMapper.readValue(townResponse, Town.class);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+        System.out.println(townResponse);
 
-        return townCompare.getName().equals(town.getTownName());
+        System.out.println(townResponse.getName());
+
+        System.out.println(town.getName());
+
+        return townResponse.getName().equals(town.getName());
     }
 }

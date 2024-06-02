@@ -8,11 +8,11 @@
         <version>3.2.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.iStudent.api_composition</groupId>
-    <artifactId>iStudent_api_composition</artifactId>
+    <groupId>com.istudent.microservicos.sagaorchestrator</groupId>
+    <artifactId>iStudent_saga_orchestrator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>iStudent api composition</name>
-    <description>iStudent api composition service</description>
+    <name>iStudent saga orchestrator</name>
+    <description>iStudent saga orchestrator service</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>

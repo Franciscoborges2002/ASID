@@ -13,9 +13,10 @@ import lombok.ToString;
 @MappedSuperclass
 @Getter
 @Setter
+@ToString
 public abstract class PersonEntityDTO {
 
-    //private Long id;
+    private Long id;
 
     @NotBlank
     @Size(min = 2, max = 20)

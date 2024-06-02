@@ -1,6 +1,21 @@
 version: '3.8'
 
 services:
+  #Iniciar zookeper, que e necessário para o kafka
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+  #Iniciar kafka para tratar da troca de mensagens para cada microserviço
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
   # Serviço da api gateway, não precisa de bd
   api_gateway:
     #image: ASID_api_gateway

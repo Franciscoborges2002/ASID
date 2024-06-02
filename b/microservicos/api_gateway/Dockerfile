@@ -4,10 +4,10 @@ FROM openjdk:17
 VOLUME /tmp
 
 ARG JAR_FILE=./out/artifacts/api_gateway_jar/api_gateway.jar
-ADD ${JAR_FILE} api_gateway.jar
+COPY ${JAR_FILE} api_gateway.jar
 
 # Expose the port the app runs on
 EXPOSE 8080
 
 # Run the jar file
-CMD ["java", "-jar", "api_gateway.jar"]
+ENTRYPOINT ["java", "-jar", "api_gateway.jar"]

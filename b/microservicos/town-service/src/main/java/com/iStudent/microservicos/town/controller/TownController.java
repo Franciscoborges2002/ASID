@@ -18,8 +18,9 @@ public class TownController {
     private final TownService townService;
 
     @GetMapping("/all")
-    public List<Town> getTowns(){
-        return this.townService.getTowns();
+    public ResponseEntity<List<TownDTO>> getTowns(){
+        List<TownDTO> towns = townService.getTowns();
+        return ResponseEntity.ok(towns);
     }
 
     @GetMapping("/{id}")

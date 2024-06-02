@@ -15,6 +15,9 @@ public class Town extends BaseEntityWithIdLong {
     private String name;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "country_id")
+    @JoinColumn(name = "country_id")//, fetch = FetchType.LAZY
     private Country country;
+
+    //@Column
+   // private int numberHabitants;
 }

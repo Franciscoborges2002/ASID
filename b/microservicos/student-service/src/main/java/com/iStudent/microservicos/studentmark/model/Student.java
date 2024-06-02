@@ -17,14 +17,14 @@ import java.util.Set;
 @ToString
 public class Student extends BasePersonEntity {
     /*@ManyToOne
-    private Parent parent;
+    private Parent parent;*/
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "students_clubs",
             joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "club_id", referencedColumnName = "id")
     )
-    private Set<Club> clubs;*/
+    private Set<Club> clubs;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "students_marks",

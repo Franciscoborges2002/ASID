@@ -1,11 +1,18 @@
 package com.iStudent.microservicos.studentmark.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class TownDTO {
+    private Long id;
 
-    private String townName;
+    @NotBlank
+    private String name;
+
+    private CountryDTO country;
 }

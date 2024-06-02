@@ -32,10 +32,18 @@ public class ApplicationConfig {
     @Bean
     CommandLineRunner initiateTown(TownRepository repository, CountryRepository countryRepository) {
         return args -> {
-            Town town = new Town();
-            town.setName("Vila de Prado");
-            town.setCountry(countryRepository.findById(1L).get());
-            repository.save(town);
+            Town town1 = new Town();
+            town1.setName("Vila de Prado");
+            //town1.setNumberHabitants(500);
+            town1.setCountry(countryRepository.findById(1L).get());
+
+            Town town2 = new Town();
+            town2.setName("Vila Verde");
+            //town2.setNumberHabitants(1005);
+            town2.setCountry(countryRepository.findById(1L).get());
+
+            repository.save(town1);
+            repository.save(town2);
         };
     }
 }

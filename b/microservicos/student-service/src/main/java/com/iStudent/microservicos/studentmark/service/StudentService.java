@@ -2,9 +2,10 @@ package com.iStudent.microservicos.studentmark.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iStudent.microservicos.studentmark.controller.TownCallerController;
-import com.iStudent.microservicos.studentmark.dto.MarkDTO;
-import com.iStudent.microservicos.studentmark.dto.StudentDTO;
+import com.iStudent.microservicos.studentmark.dto.*;
+import com.iStudent.microservicos.studentmark.extern.ClubCallerController;
+import com.iStudent.microservicos.studentmark.extern.TownCallerController;
+import com.iStudent.microservicos.studentmark.model.Club;
 import com.iStudent.microservicos.studentmark.model.Mark;
 import com.iStudent.microservicos.studentmark.model.Student;
 import com.iStudent.microservicos.studentmark.model.Town;
@@ -26,7 +27,9 @@ public class StudentService {
 
     private final ModelMapper mapper;
 
-    private TownCallerController townCallerController;
+    private final TownCallerController townCallerController;
+
+    private final ClubCallerController clubCallerController;
 
     public List<StudentDTO> getAllStudents() {
         return studentRepository
@@ -42,35 +45,77 @@ public class StudentService {
                 .map(this::mapToStudentDTO);
     }
 
-    public long addStudent(StudentDTO studentDTO) throws JsonProcessingException {
-        try{
-            String townResponse = townCallerController.findTownByName(studentDTO.getTown());
+    public StudentDTO addStudent(StudentDTO studentDTO) {
 
-            ObjectMapper objectMapper = new ObjectMapper();
-            Town town = objectMapper.readValue(townResponse, Town.class);
+        try{
+            TownDTO townResponse = townCallerController.findTownByName(studentDTO.getTown());
 
             //If exists the town in the town microservice
-            if(town.getName().equals(studentDTO.getTown())){
-
-            /*Parent parentToMap = parentService.findParentById(studentDTO.getParent() != null
-                ? studentDTO.getParent().getId()
-                : 0);*/
+            if(townResponse.getName().equals(studentDTO.getTown())){
 
                 Student student = mapper.map(studentDTO, Student.class);
 
-                student.setTown(town.getName());
-                //student.setParent(parentToMap);
+                //Set town to student
+                student.setTown(townResponse.getName());
 
+                //Save to repos
                 studentRepository.save(student);
 
-                return student.getId();
+                StudentDTO studentDTOReturn = mapper.map(student, StudentDTO.class);
+
+                return studentDTOReturn;
             }
 
 
         }catch(Exception ex){
             throw new IllegalArgumentException("The town you inserted doesnt exist");
         }
-        throw new IllegalArgumentException("The town you inserted doesnt exist");
+        throw new IllegalArgumentException("Couldn't add student");
+    }
+
+    public ClubStudentDTO attachClubToStudent(Long studentId, Long clubId) throws JsonProcessingException {
+        //Create var to return
+        ClubStudentDTO toRespond = new ClubStudentDTO();
+
+        //Verify if student exists
+        Optional<Student> optStudent = studentRepository.findById(studentId);
+
+        //If student doesn't exist
+        if(!optStudent.isPresent()){
+            toRespond.setSuccess(false);
+            toRespond.setMessage("Club doesnt exist!");
+            return toRespond;
+        }
+
+        //get the actual object of the student
+        Student student = optStudent.get();
+
+        //Verify if the club exists with the id, send request to his service
+        ClubDTO clubDTO = clubCallerController.findClubById(clubId);
+
+        //Already has the student in the club, return false
+        if(student.getClubs().contains(clubDTO)){
+            toRespond.setSuccess(false);
+            toRespond.setMessage("Student already belongs to this club!");
+            return toRespond;
+        }
+
+        //Attach to a club the id from the dto
+        Club club = new Club();
+        club.setId(clubId);
+
+        // Proceed with attaching the student to the club
+        // Assuming you have a method to add students to the club
+        student.getClubs().add(club);//getStudents().add(student);
+
+        // Save the club after adding the student
+        studentRepository.save(student);
+
+        //Make the object to respond to the client
+        toRespond.setSuccess(true);
+        toRespond.setMessage("Student added to the club!");
+
+        return toRespond;
     }
 
     public boolean addMarkToStudent(Long studentId, MarkDTO markDTO) {
