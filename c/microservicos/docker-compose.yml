@@ -1,0 +1,175 @@
+version: '3.8'
+
+services:
+  # Serviço da api gateway, não precisa de bd
+  api_gateway:
+    #image: ASID_api_gateway
+    build: 
+      dockerfile: ./Dockerfile.api_gateway
+    ports:
+      - '8080:8080'
+    expose:
+      - '8080'
+    restart: unless-stopped
+  #Serviço do service discover
+  discover_server:
+    build: 
+      dockerfile: ./Dockerfile.discovery_server
+    ports:
+      - '8761:8761'
+    expose:
+      - '8761'
+    restart: unless-stopped
+  #Serviço da saga
+  saga_service:
+    build: 
+      dockerfile: ./Dockerfile.saga_orchestrator
+    ports:
+      - '8090:8090'
+    expose:
+      - '8090'
+    restart: unless-stopped
+  #Serviço do service town
+  town_country_service:
+    build: 
+      dockerfile: ./Dockerfile.town_service
+    ports:
+      - '8081:8081'
+    expose:
+      - '8081'
+    restart: unless-stopped
+  # DB for town and country service
+  town_country_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'towns'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3308:3306'
+    expose:
+      # Opens port 3308 on the container
+      - '3308'
+    volumes:
+      # Where our data will be persisted
+      - town_country_service_db:/var/lib/mysql
+  #Serviço da students
+  parents_service:
+    build: 
+      dockerfile: ./Dockerfile.parent_service
+    ports:
+      - '8089:8089'
+    expose:
+      - '8089'
+    restart: unless-stopped
+  # DB for parents service
+  parents_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'parents'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3309:3306'
+    expose:
+      # Opens port 3309 on the container
+      - '3309'
+    volumes:
+      # Where our data will be persisted
+      - parents_service_db:/var/lib/mysql
+   #Serviço do service town
+  # Servico students
+  students_service:
+    build: 
+      dockerfile: ./Dockerfile.students_service
+    ports:
+      - '8082:8082'
+    expose:
+      - '8082'
+    restart: unless-stopped
+  # DB for students service
+  students_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'student'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3310:3306'
+    expose:
+      # Opens port 3310 on the container
+      - '3310'
+    volumes:
+      # Where our data will be persisted
+      - students_service_db:/var/lib/mysql
+  # Servico clubs
+  clubs_service:
+    build: 
+      dockerfile: ./Dockerfile.club_service
+    ports:
+      - '8084:8084'
+    expose:
+      - '8084'
+    restart: unless-stopped
+  # DB for club service
+  club_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'clubs'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3311:3306'
+    expose:
+      # Opens port 3311 on the container
+      - '3311'
+    volumes:
+      # Where our data will be persisted
+      - club_service_db:/var/lib/mysql
+
+  # DB for employees service
+  employee_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'employee'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+    volumes:
+      # Where our data will be persisted
+      - employee_service_db:/var/lib/mysql
+  
+  # DB for teachers service
+  teachers_service_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'teachers'
+      MYSQL_ROOT_PASSWORD: '12345' #Password for root access
+    ports:
+      - '3307:3306'
+    expose:
+      # Opens port 3307 on the container
+      - '3307'
+    volumes:
+      # Where our data will be persisted
+      - teachers_db_istudent:/var/lib/mysql
+
+
+volumes:
+  town_country_service_db:
+    driver: local
+  parents_service_db:
+    driver: local
+  students_service_db:
+    driver: local
+  club_service_db:
+    driver: local
+  employee_service_db:
+    driver: local
+  teachers_db_istudent:
+    driver: local
