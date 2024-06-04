@@ -1,0 +1,17 @@
+com\iStudent\microservicos\town_country\dto\CountryDTO.class
+com\iStudent\microservicos\town_country\dto\ReturnClubTownDTO.class
+com\iStudent\microservicos\town_country\repository\TownRepository.class
+com\iStudent\microservicos\town_country\controller\TownController.class
+com\iStudent\microservicos\town_country\model\base\BaseEntityWithIdLong.class
+com\iStudent\microservicos\town_country\extern\ClubCallerService.class
+com\iStudent\microservicos\town_country\MicroservicosApplication.class
+com\iStudent\microservicos\town_country\model\Town.class
+com\iStudent\microservicos\town_country\config\ApplicationConfig.class
+com\iStudent\microservicos\town_country\model\Country.class
+com\iStudent\microservicos\town_country\service\TownService.class
+com\iStudent\microservicos\town_country\dto\ClubDTO.class
+com\iStudent\microservicos\town_country\model\Club.class
+com\iStudent\microservicos\town_country\repository\CountryRepository.class
+com\iStudent\microservicos\town_country\model\enums\OperationStatusEnum.class
+com\iStudent\microservicos\town_country\dto\TownDTO.class
+com\iStudent\microservicos\town_country\service\CountryRepository.class
