@@ -1,19 +1,8 @@
-#
-# Build stage
-#
-FROM eclipse-temurin:17-jdk-jammy AS build
-
-ENV HOME=/usr/app
-RUN mkdir -p $HOME
-WORKDIR $HOME
-ADD ./discovery_server $HOME
-RUN --mount=type=cache,target=/root/.m2 ./mvnw -f $HOME/pom.xml clean package
-
 # Works on jdk 17
 FROM openjdk:17
-ARG JAR_FILE=/usr/app/target/*.jar
+ARG JAR_FILE=/discovery_server/target/*.jar
 
-COPY --from=build $JAR_FILE /app/discovery_server.jar
+COPY $JAR_FILE /app/discovery_server.jar
 # Expose the port the app runs on
 EXPOSE 8761
 
