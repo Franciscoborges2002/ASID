@@ -1,13 +1,21 @@
+#
+# Build stage
+#
+FROM eclipse-temurin:17-jdk-jammy AS build
+
+ENV HOME=/usr/app
+RUN mkdir -p $HOME
+WORKDIR $HOME
+ADD ./api_gateway $HOME
+RUN --mount=type=cache,target=/root/.m2 ./mvnw -f $HOME/pom.xml clean package
+
 # Works on jdk 17
 FROM openjdk:17
+ARG JAR_FILE=/usr/app/target/*.jar
 
-VOLUME /tmp
-
-ARG JAR_FILE=./out/artifacts/api_gateway_jar/api_gateway.jar
-COPY ${JAR_FILE} api_gateway.jar
-
+COPY --from=build $JAR_FILE /app/api_gateway.jar
 # Expose the port the app runs on
 EXPOSE 8080
 
 # Run the jar file
-ENTRYPOINT ["java", "-jar", "api_gateway.jar"]
+ENTRYPOINT ["java", "-jar", "/app/api_gateway.jar"]

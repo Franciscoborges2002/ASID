@@ -1,10 +1,11 @@
 package com.istudent.microservicos.parent.service;
 
+import com.istudent.microservicos.parent.dto.DeleteDTO;
 import com.istudent.microservicos.parent.dto.ParentDTO;
+import com.istudent.microservicos.parent.dto.TownDTO;
+import com.istudent.microservicos.parent.extern.TownCallerService;
 import com.istudent.microservicos.parent.model.Parent;
-import com.istudent.microservicos.parent.model.Town;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import com.istudent.microservicos.parent.repository.ParentRepository;
@@ -19,6 +20,8 @@ public class ParentService {
     private final ParentRepository parentRepository;
 
     private final ModelMapper mapper;
+
+    private final TownCallerService towncallerService;
 
     public Parent findParentById(Long parentId) {
         return parentRepository.findById(parentId).orElse(null);
@@ -42,15 +45,56 @@ public class ParentService {
                 map(this::mapToParentDTO);
     }
 
-    /*public long addParent(ParentDTO parentDTO) {
-        Town townToMap = townService.findByTownId(parentDTO.getTown().getId());
+    public ParentDTO addParent(ParentDTO parentDTO) {
+        Parent parent = new Parent();
+        ParentDTO parentDTOtoReturn = new ParentDTO();
 
-        Parent parent = mapper.map(parentDTO, Parent.class);
-        parent.setTown(townToMap);
+        try{
+            TownDTO townResponse = towncallerService.findTownByName(parentDTO.getTown());
 
-        parentRepository.save(parent);
+            //If exists the town in the town microservice
+            if(townResponse.getName().equals(parentDTO.getTown())){
 
-        return parent.getId();
+                try{
+                    parent = mapper.map(parentDTO, Parent.class);
 
-    }*/
+                    //Set town to student
+                    parent.setTown(townResponse.getName());
+
+                    //Save to repos
+                    parentRepository.save(parent);
+
+                    parentDTOtoReturn = mapper.map(parent, ParentDTO.class);
+
+                }catch(Exception e){
+                    throw new IllegalArgumentException("Error while creating parent!");
+                }
+
+                return parentDTOtoReturn;
+            }
+
+        }catch(Exception ex){
+            throw new IllegalArgumentException("The town you inserted doesnt exist");
+        }
+
+        throw new IllegalArgumentException("Couldn't add parent!");
+    }
+
+    public DeleteDTO deleteParentById(Long parentId) {
+        DeleteDTO response = new DeleteDTO();
+        Optional<Parent> parent = parentRepository.findById(parentId);
+
+        if(parent.isPresent()){
+            parentRepository.deleteById(parentId);
+
+            response.setId(parentId);
+            response.setMessage("Successfully deleted parent!");
+
+            return response;
+        }
+
+        response.setMessage("Parent was not deleted!");
+
+        return response;
+    }
 }

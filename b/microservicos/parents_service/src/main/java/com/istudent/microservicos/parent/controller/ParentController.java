@@ -1,14 +1,12 @@
 package com.istudent.microservicos.parent.controller;
 
+import com.istudent.microservicos.parent.dto.DeleteDTO;
 import com.istudent.microservicos.parent.dto.ParentDTO;
-import com.istudent.microservicos.parent.extern.TownCallerService;
 import com.istudent.microservicos.parent.service.ParentService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,10 +23,9 @@ public class ParentController {
         try {
             List<ParentDTO> parents = parentService.getAllParents();
 
-            System.out.println(parents.get(0).getAge());
             return ResponseEntity.ok(parents);
         } catch (Exception e) {
-            throw new RuntimeException("Error fetching parents", e);
+            throw new RuntimeException("Error fetching parents ", e);
         }
     }
 
@@ -39,5 +36,18 @@ public class ParentController {
         return parent.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity
                 .notFound()
                 .build());
+    }
+
+    @PostMapping
+    public ResponseEntity<ParentDTO> addParent(@Valid @RequestBody ParentDTO parentDTO) {
+        ParentDTO parentReturn = parentService.addParent(parentDTO);
+
+        return ResponseEntity
+                .ok(parentReturn);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<DeleteDTO> deleteStudentById(@PathVariable("id") Long parentId) {
+        return ResponseEntity.ok(this.parentService.deleteParentById(parentId));
     }
 }

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b83f58f-69c2-43d7-8154-a6b072cdcc52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Dockerfile.api_gateway" beforeDir="false" afterPath="$PROJECT_DIR$/../Dockerfile.api_gateway" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dockerfile.discovery_server" beforeDir="false" afterPath="$PROJECT_DIR$/../Dockerfile.discovery_server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api_gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../api_gateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api_gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api_gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api_gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api_gateway/src/test/java/com/iStudent/microservicos/api_gateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api_gateway/src/test/java/com/iStudent/microservicos/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../discovery_server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/out/artifacts/iStudent_employees_jar/iStudent_employees.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/src/main/java/com/discoveryserver/MicroservicosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../discovery_server2/src/test/java/com/discoveryserver/MicroservicosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/MicroservicosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/controller/MarkController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/ClubDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/ClubStudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/CountryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/MarkDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/TownDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/dto/base/PersonEntityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/extern/ClubCallerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/extern/TownCallerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/Club.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/Mark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/Town.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/base/BaseEntityWithIdLong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/base/BasePersonEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/enums/GenderEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/enums/MarkEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/validation/ValidGender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/validation/ValidGenderValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/validation/ValidTown.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/model/validation/ValidTownValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/repository/MarkRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/service/MarkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iStudent/microservicos/studentmark/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iStudent/microservicos/studentmark/MicroservicosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/out/artifacts/iStudent_employees_jar/iStudent_employees.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/out/artifacts/iStudent_employees_jar2/iStudent_employees.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/src/main/java/com/example/microservicos/MicroservicosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/src/main/java/com/example/microservicos/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teste/src/test/java/com/example/microservicos/MicroservicosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/MicroservicosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/controller/TownController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/dto/CountryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/dto/TownDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/model/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/model/Town.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/model/base/BaseEntityWithIdLong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/repository/CountryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/repository/TownRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/service/CountryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/java/com/iStudent/microservicos/town/service/TownService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../town-service/src/test/java/com/iStudent/microservicos/town/MicroservicosApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2fQBVnsab7ah2TZIBng0J6zb2Sd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MicroservicosApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Aorus/Desktop/uni/4ano/ASID/b/microservicos/students_service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.iStudent.microservicos.studentmark.repository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aorus\Desktop\uni\4ano\ASID\a\microservicos\teachers-service\src\main\java\com\example\microservicos" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.iStudent.microservicos.studentmark.repository" />
+      <recent name="com.example.microservicos.dto.base" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MicroservicosApplication">
+    <configuration name="MicroservicosApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="iStudent_employees" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.iStudent.microservicos.studentmark.MicroservicosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="iStudent_students_marks" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.iStudent.microservicos.studentmark.MicroservicosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.MicroservicosApplication" />
+      <item itemvalue="Spring Boot.MicroservicosApplication (1)" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b83f58f-69c2-43d7-8154-a6b072cdcc52" name="Changes" comment="" />
+      <created>1713723453307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713723453307</updated>
+      <workItem from="1713723454361" duration="347000" />
+      <workItem from="1713723912521" duration="1571000" />
+      <workItem from="1714055506634" duration="90000" />
+      <workItem from="1715697131278" duration="17000" />
+      <workItem from="1715697159177" duration="221000" />
+      <workItem from="1715697388128" duration="2741000" />
+      <workItem from="1715777228165" duration="1425000" />
+      <workItem from="1715785053282" duration="7035000" />
+      <workItem from="1716149403082" duration="1031000" />
+      <workItem from="1716284698055" duration="1419000" />
+      <workItem from="1716297534123" duration="3071000" />
+      <workItem from="1716922617012" duration="304000" />
+      <workItem from="1716997627584" duration="810000" />
+      <workItem from="1717247679741" duration="9168000" />
+      <workItem from="1717376596377" duration="1577000" />
+      <workItem from="1717379172461" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

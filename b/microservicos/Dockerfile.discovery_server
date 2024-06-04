@@ -1,6 +1,21 @@
-#Image of the openjdk
-FROM openjdk:17-jdk-alpine
-#Build context into the root folder of our container with the name app.jar.
-COPY discovery_server/out/artifacts/discovery_server_jar/discovery_server.jar app.jar
-#Start to run the app
-ENTRYPOINT ["java","-jar","/app.jar"]
+#
+# Build stage
+#
+FROM eclipse-temurin:17-jdk-jammy AS build
+
+ENV HOME=/usr/app
+RUN mkdir -p $HOME
+WORKDIR $HOME
+ADD ./discovery_server $HOME
+RUN --mount=type=cache,target=/root/.m2 ./mvnw -f $HOME/pom.xml clean package
+
+# Works on jdk 17
+FROM openjdk:17
+ARG JAR_FILE=/usr/app/target/*.jar
+
+COPY --from=build $JAR_FILE /app/discovery_server.jar
+# Expose the port the app runs on
+EXPOSE 8761
+
+# Run the jar file
+ENTRYPOINT ["java", "-jar", "/app/discovery_server.jar"]

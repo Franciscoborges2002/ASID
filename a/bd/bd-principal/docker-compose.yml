@@ -8,9 +8,9 @@ services:
       MYSQL_DATABASE: 'iStudent'
       MYSQL_ROOT_PASSWORD: '12345' #Password for root access
     ports:
-      - '3306:3306'
+      - '3333:3306'
     expose: # Opens port 3306 on the container
-      - '3306'
+      - '3333'
     volumes: # Where our data will be persisted
       - istudent:/var/lib/mysql
 

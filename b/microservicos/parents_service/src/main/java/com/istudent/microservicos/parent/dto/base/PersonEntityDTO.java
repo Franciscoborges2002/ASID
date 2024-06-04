@@ -10,6 +10,7 @@ import lombok.*;
 @MappedSuperclass
 @Getter
 @Setter
+@ToString
 public abstract class PersonEntityDTO {
 
     private Long id;
